@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -12,7 +14,6 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.login.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
-
     private FragmentFirstBinding binding;
 
     @Override
@@ -36,6 +37,40 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+        // Configura el listener para las vistas de productos (donut, ice cream, froyo)
+        ImageView donutImageView = view.findViewById(R.id.donut);
+        ImageView iceCreamImageView = view.findViewById(R.id.oreo);
+        ImageView froyoImageView = view.findViewById(R.id.helado);
+
+        donutImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showProductOrder(R.string.donut_order_message);
+            }
+        });
+
+        iceCreamImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showProductOrder(R.string.ice_cream_order_message);
+            }
+        });
+
+        froyoImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showProductOrder(R.string.froyo_order_message);
+            }
+        });
+
+    }
+    public void showProductOrder(int messageResId) {
+        String message = getString(messageResId);
+        displayToast(message);
+    }
+
+    public void displayToast(String message) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show();
     }
 
     @Override
