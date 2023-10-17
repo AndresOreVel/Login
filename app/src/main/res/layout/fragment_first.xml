@@ -7,14 +7,56 @@
     tools:context="android.MainActivity">
 
     <TextView
-        android:id="@+id/textview_first"
+        android:id="@+id/textintro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
+        android:text="@string/Droid_desserts"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <ImageView
+        android:id="@+id/donut"
+        android:contentDescription="@string/donuts_are_glazed_and_sprinkled_with_candy"
+        android:layout_width="165dp"
+        android:layout_height="108dp"
+        android:src="@drawable/donut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <ImageView
+        android:id="@+id/oreo"
+        android:contentDescription="@string/ice_cream_sandwiches_have_chocolate_wafers_and_vanilla_filling"
+        android:layout_width="165dp"
+        android:layout_height="108dp"
+        android:src="@drawable/oreo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.479" />
+
+    <ImageView
+        android:id="@+id/helado"
+        android:contentDescription="@string/froyo_is_premium_self_serve_frozen_yogurt"
+        android:layout_width="165dp"
+        android:layout_height="108dp"
+        android:src="@drawable/helado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.739" />
 
     <Button
         android:id="@+id/button_first"
@@ -23,6 +65,8 @@
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/textintro"
+        app:layout_constraintVertical_bias="0.873" />
 </androidx.constraintlayout.widget.ConstraintLayout>
